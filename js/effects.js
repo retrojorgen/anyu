@@ -1,28 +1,7 @@
-var showSubSection = function(event) {
-      var category = $(event.target).closest('.category').attr('data-category');
-      var categorySubsection = $(event.target).closest('.category-subsection').attr('data-subcategory');
-      $('.category-subsection').addClass('visible');
-      if(category !== undefined) {
-        getSubSection(category, function(category) {
+var scrollController = function(event) {
+  $('.intro').css({
+    'background-position': '0 ' + (window.scrollY*-1)/3 + 'px'
+  });
+}
 
-        });
-      } else {
-        $('.category[data-category=' + categorySubsection + ']').addClass('active');
-      }
-    },
-    hideSubSection = function(event) {
-      $('.category-subsection').removeClass('visible');
-      $('.category').removeClass('active');
-    }
-    getSubSection = function(category, callback) {
-      $('.category-subsection').attr('data-subcategory', category);
-      
-      $
-    };
-
-//listeners
-$('.category').on('mouseover', showSubSection);
-$('.category').on('mouseout', hideSubSection);
-
-$('.category-subsection').on('mouseover', showSubSection);
-$('.category-subsection').on('mouseout', hideSubSection);
+$(document).on('scroll', scrollController);

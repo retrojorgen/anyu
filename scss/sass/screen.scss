@@ -9,12 +9,12 @@
 $otherThanPhone: "only screen and (min-width : 602px)";
 $otherThanPhoneAndIpad: "only screen and (min-width : 1025px)";
 
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400|Sanchez);
 
 
 
-$regularFont : 'Roboto Slab';
-$thinFont : 'Roboto';
+$regularFont : 'Sanchez';
+$thinFont : 'Raleway';
 
 $gray : rgba(160,160,160,1);
 $blue : #4374e0;
@@ -26,365 +26,241 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  font-family: $regularFont;
+  font-family: $thinFont;
   background-color: rgba(235,235,235,1);
 }
 
-div, button, ul, li {
+div, button, ul, li,h1,h2 {
   @include box-sizing(border-box);
 }
 
-.main-header {
-  position: fixed;
-  background-color: $blue;
+.page {
   width: 100%;
-  min-height: 29px;
-  top: 0;
-  z-index: 300;
-  .inner-header {
-    position: relative;
-    background-color: $blue;
-    z-index: 400;
-    .logo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin: 8px 10px 8px 20px;
-      content: "";
-      width: 111px;
-      height: 29px;
-      background: {
-        image: url(../images/dinside.svg);
-        size: 111px 29px;
-        repeat: no-repeat;
-      }
-    }
-    .category-menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      border-left: 150px solid transparent;
-      border-right: 200px solid transparent;
-      max-height: 46px;
-      overflow: hidden;
-      position: relative;
-
-      .category {
-        vertical-align: top;
-        font-family: $thinFont;
-        font-size: 14px;
-        text-transform: uppercase;
-        color: white;
-        padding: 14px 30px 14px 10px;
-        position: relative;
-        display: inline-block;
-
-        &:after {
-          content: "";
-          position: absolute;
-          width: 8px;
-          height: 8px;
-          right: 14px;
-          bottom: 16px;
-          background: {
-            size: 8px 8px;
-            image: url(../images/arrow.svg);
-            repeat: no-repeat;
-          }
-        }
-        &:hover,
-        &.active {
-          background: {
-            color: white;
-          }
-          color: $blue;
-          cursor: pointer;
-          &:after {
-            background: {
-              image: url(../images/arrow-blue.svg);
-            }
-          }
-        }
-      }
-    }
-    .search {
-      position: absolute;
-      right: 0;
-      top: 0;
-      max-height: 46px;
-      background-color: rgba(0,0,0,0.2);
-
-      .submit-magnifying {
-        position: absolute;
-        left: 0;
-        top: 0;
-        padding: 0;
-        margin: 0;
-        width: 46px;
-        height: 46px;
-        border: 0;
-        border-right: 1px solid rgba(255,255,255,0.3);
-        background: {
-          image: url(../images/magnifying-glass.svg);
-          size: 22px auto;
-          position: 10px 14px;
-          repeat: no-repeat;
-          color: transparent;
-        }
-      }
-      .search-phrase {
-        width: 100px;
-        height: 10px;
-        display: inline-block;
-        font-size: 14px;
-        height: 46px;
-        width: 150px;
-        color: white;
-        font-family: $regularFont;
-        padding: 0 0 0 52px;
-        margin: 0;
-        border: 0;
-        vertical-align: top;
-        background-color: transparent;
-      }
-    }
-  }
-  .category-subsection {
-    position: absolute;
-    top: -260px;
-    left: 0;
-    width: 100%;
-    background: {
-      color: white;
-    }
-    height: 250px;
-    overflow: hidden;
-    z-index: 200;
-    border-bottom: 4px solid $blue;
-    @include transition(top 300ms ease);
-
-    &.visible {
-      top: 46px;
-      @include transition(top 300ms ease);
-      min-height: 250px;
-      
-    }
-
-    .subsection-articles {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      .article {
-        display: inline-block;
-        width: 200px;
-        margin: 15px 0px 25px 20px; 
-        vertical-align: top;
-        .article-image {
-          height: 115px;
-          width: 100%;
-          overflow: hidden;
-          img {
-            width: 200px;
-            @include filter(saturate(0.6));
-            @include transition(filter 400ms, -webkit-filter 400ms);
-            &:hover {
-              @include filter(saturate(1.3));
-              @include transition(filter 400ms, -webkit-filter 400ms);
-            }
-          }
-        }
-        .article-header {
-          font-size: 14px;
-          color: rgba(0,0,0,0.6);
-        }
-      }
-    }
-  }
-}
-.main-content-wrapper {
-  width: 100%;
-  margin-top: 160px;
-  .main-content-container {
-    width: 980px;
-    margin: 60px auto 0 auto;
-
-    @media #{$otherThanPhoneAndIpad} {
-      width: 1100px;
-    }
-
-    .row {
-      width: 100%;
-      padding: 0;
-      height: 100%;
-
-      &.white {
-        background-color: white;
-      }
-      .col-1,
-      .col-2,
-      .col-3,
-      .col-4,
-      .col-5,
-      .col-6 {
-        display: inline-block;
-        background-color: white;
-        float: left;
-        position: relative;
-        padding-bottom: 30px;
-
-        &:before {
-          position: absolute;
-          content: attr(data-category);
-          background-color: $gray;
-          font-size: 18px;
-          padding: 10px;
-          text-transform: uppercase;
-          color: white;
-          top: 10px;
-          left: -10px;
-          z-index: 100;
-        }
-        &:after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -10px;
-          top: 54px;
-          width: 10px;
-          height: 15px;
-          background: {
-            image: url(../images/arrow-black.svg);
-            size: 11px 15px;
-            repeat: no-repeat;
-          }
-          z-index: 80;
-        }
-
-        .tiny-col {
-          position: relative;
-          width: 100%;
-          padding: 10px;
-          .article-image {
-            position: absolute;
-            width: 80px;
-            height: 60px;
-            top: 50%;
-            margin-top: -30px;
-            left: 10px;
-            overflow: hidden;
-            img {
-              width: 115%;
-            }
-          }
-          .article-header {
-            font-size: 14px;
-            padding: 10px 10px 10px 100px;
-          }
-        }
-
-        .tiny-col:nth-of-type(1) {
-          margin-top: 60px;
-        }
-      }
-      .col-1 {
-        width: 16.66667%;
-        height: 100%;
-        .article-header {
-          font-size: 18px;
-        }
-
-        .article-image {
-          max-height: 200px;
-        }
-
-
-      }
-
-      .col-2 {
-        width: 33.333332%;
-        .article-header {
-          font-size: 22px;
-        }
-        .article-image {
-          max-height: 240px;
-          img {
-            width: 110%;
-          }
-        }
-      }
-      .col-2:nth-of-type(1),
-      .col-2:nth-of-type(2) {
-        padding-right: 10px;
-      }
-      .col-3 {
-        width: 50%;
-        .article-header {
-          font-size: 28px;
-        }
-        .article-image {
-          max-height: 300px;
-          img {
-            width: 100%;
-          }
-        }
-      }
-      .col-3:nth-of-type(1) {
-        padding-right: 10px;
-      }
-      .col-4 {
-        width: 66.66667%;
-        .article-header {
-          font-size: 32px;
-        }
-        &:before {
-          background-color: $blue;
-        }
-      }
-      .article-image {
-          max-height: 400px;
-          overflow: hidden;
-          position: relative;
-
-        img {
-          width: 100%;
-        }
-      }
-      .article-header {
-        padding: 20px;
-        margin: 0;
-      }
-
-      //clear hacks
-      *zoom: 1;
-      &:before,
-      &:after {
-          content: " "; /* 1 */
-          display: table; /* 2 */
-      }
-      &:after {
-        clear: both;
-      }
-    }
-  }
-}
-
-.article-image {
+  height: 100%;
   position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    height: 100%;
+  .page-body {
+    position: relative;
     width: 100%;
-    left: 0;
-    top: 0;
-    @include box-shadow(rgba(0,0,0,0.4) 0 0 60px 10px inset);
-    @include transition(box-shadow 400ms ease);
+    margin: 0 auto;
+    max-width: 700px;
+    height: 100%;
+    overflow: hidden;
+    .address {
+      font-family: $regularFont;
+      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      margin-top: 60px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+    }
+    color: #6a4e4e;
+
+    h1 {
+      position: relative;
+      display: block;
+      padding: 0;
+      margin: 0;
+      text-transform: uppercase;
+      padding-top: 60px;
+
+      font-size: 2.5em;
+      font-family: $thinFont;
+      text-transform: uppercase;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1;
+      color: rgba(255,255,255,0.6);
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 30%;
+        height: 2px;
+        top: 120px;
+        left: 34%;
+        background: {
+          color: rgba(255,255,255,0.6);
+        }
+      }
+    }
+    h2 {
+      text-align: center;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 30%;
+        height: 2px;
+        top: 60px;
+        left: 34%;
+        background: {
+          color: rgba(255,255,255,0.6);
+        }
+      } 
+    }
+    p {
+      line-height: 1.6;
+      font-size: 18px;
+    }
   }
-  &:hover {
+  &.intro {
+    background: {
+      image: url(../images/intro-2.jpg);
+      size: 100%;
+      repeat: no-repeat;
+    }
+  }
+  &.welcome {
+    color: rgba(255,255,255,0.8);
+    @include box-shadow(0 0 40px 1px rgba(0,0,0,0.4));
+    background: {
+      size: 100%;
+      attachment: fixed !important;
+      position: center;
+      background-repeat: repeat;
+      color: #fffcec;
+    }
+
+    p:first-of-type {
+      margin-top: 40px;
+    }
+
+    h1 {
+      color: #552500;
+      &:after {
+        background-color: #552500;
+      }
+    }
+    h2 {
+      color: #552500;
+      &:after {
+        background-color: #552500;
+      }
+    }
+    p {
+      color: #67462c;
+      line-height: 1.5;
+      font-weight: normal;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+}
+
+.logo {
+  position: absolute;
+  text-indent: -999999px;
+  left: 50%;
+  margin-left: -112px;
+  width: 224px;
+  height: 150px;
+  top: 50%;
+  margin-top: -112px;
+  
+  background: {
+    image: url(../images/logo.svg);
+    size: 224px 150px;
+    repeat: no-repeat;
+  }
+}
+
+.menu {
+  position: fixed;
+  right: 100px;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  top: 50%;
+  margin-top: -80px;
+
+  li {
+    display: block;
+    color: white;
+    text-align: left;
+    font-family: $thinFont;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #d1b271;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    position: relative;
+    cursor:pointer;
+    @include transition(color 500ms linear);
+
+    &:before {
+      content: "";
+      position: absolute;
+      border: 2px solid #d1b271;
+      width: 10px;
+      height: 10px;
+      right: -30px;
+      top: 50%;
+      margin-top: -5px;
+      border-radius: 50%;
+      z-index: 10;
+      @include transition(background-color 500ms ease);
+    }
     &:after {
-      @include box-shadow(rgba(0,0,0,0.0) 0 0 60px 20px inset);
-      @include transition(box-shadow 400ms ease);
+      content: "";
+      position: absolute;
+      right: -24px;
+      top: 17px;
+      height: 40px;
+      width: 2px;
+      background-color: #d1b271;
+    }
+    &:hover {
+      color: #ed8d6c;
+      &:before {
+        background: {
+          color: #ed8d6c;
+        }
+        @include transition(background-color 500ms ease);
+      }
+      @include transition(color 500ms linear);
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+
+.full {
+
+}
+.half {
+  width: 49.5%;
+  display: inline-block;
+  position: relative;
+  .portrait {
+    content: "";
+    width: 160px;
+    position: absolute;
+    height: 160px;
+    z-index: 100;
+    left: 50%;
+    margin-left: -80px;
+    border-radius: 100%;
+    background: {
+      size: 160px;
+      repeat: no-repeat;
+    }
+    &.ildiko {
+      background-image: url(../images/ildiko.jpg);
+    }
+    &.lise {
+      background-image: url(../images/lise.jpg);  
     }
   }
 }
