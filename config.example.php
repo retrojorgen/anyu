@@ -1,0 +1,1 @@
+define('TO', 'mail@mail.no');

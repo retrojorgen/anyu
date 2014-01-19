@@ -12,22 +12,26 @@ body {
   width: 100%;
   font-family: "Raleway";
   background-color: #ebebeb;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
 }
 
-/* line 33, ../scss/sass/screen.scss */
-div, button, ul, li, h1, h2 {
+/* line 37, ../scss/sass/screen.scss */
+div, button, ul, li, h1, h2, input, textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 37, ../scss/sass/screen.scss */
+/* line 41, ../scss/sass/screen.scss */
 .page {
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 41, ../scss/sass/screen.scss */
+/* line 45, ../scss/sass/screen.scss */
 .page .page-body {
   position: relative;
   width: 100%;
@@ -37,12 +41,12 @@ div, button, ul, li, h1, h2 {
   overflow: hidden;
   color: #6a4e4e;
 }
-/* line 48, ../scss/sass/screen.scss */
+/* line 52, ../scss/sass/screen.scss */
 .page .page-body .address {
   font-family: "Sanchez";
-  font-size: 16px;
+  font-size: 20px;
   position: absolute;
-  top: 50%;
+  top: 34%;
   margin-top: 60px;
   display: block;
   width: 100%;
@@ -50,7 +54,7 @@ div, button, ul, li, h1, h2 {
   color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
 }
-/* line 62, ../scss/sass/screen.scss */
+/* line 66, ../scss/sass/screen.scss */
 .page .page-body h1 {
   position: relative;
   display: block;
@@ -68,7 +72,7 @@ div, button, ul, li, h1, h2 {
   line-height: 1;
   color: rgba(255, 255, 255, 0.6);
 }
-/* line 80, ../scss/sass/screen.scss */
+/* line 84, ../scss/sass/screen.scss */
 .page .page-body h1:after {
   content: "";
   position: absolute;
@@ -78,33 +82,51 @@ div, button, ul, li, h1, h2 {
   left: 34%;
   background-color: rgba(255, 255, 255, 0.6);
 }
-/* line 92, ../scss/sass/screen.scss */
+/* line 96, ../scss/sass/screen.scss */
 .page .page-body h2 {
   text-align: center;
 }
-/* line 95, ../scss/sass/screen.scss */
+/* line 99, ../scss/sass/screen.scss */
 .page .page-body h2:after {
   content: "";
   position: absolute;
   width: 30%;
   height: 2px;
-  top: 60px;
+  top: 40px;
   left: 34%;
   background-color: rgba(255, 255, 255, 0.6);
 }
-/* line 107, ../scss/sass/screen.scss */
+/* line 111, ../scss/sass/screen.scss */
 .page .page-body p {
   line-height: 1.6;
   font-size: 18px;
 }
-/* line 112, ../scss/sass/screen.scss */
+/* line 116, ../scss/sass/screen.scss */
 .page.intro {
   background-image: url(../images/intro-2.jpg);
-  background-size: 100%;
+  background-size: 180%;
   background-repeat: no-repeat;
 }
-/* line 119, ../scss/sass/screen.scss */
-.page.welcome {
+@media only screen and (min-width: 1025px) {
+  /* line 116, ../scss/sass/screen.scss */
+  .page.intro {
+    background-size: 100%;
+  }
+}
+/* line 127, ../scss/sass/screen.scss */
+.page.offer {
+  background-image: url(../images/behandling-2.jpg);
+  background-size: 180%;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 1025px) {
+  /* line 127, ../scss/sass/screen.scss */
+  .page.offer {
+    background-size: 100%;
+  }
+}
+/* line 139, ../scss/sass/screen.scss */
+.page.welcome, .page.contact {
   color: rgba(255, 255, 255, 0.8);
   -webkit-box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.4);
@@ -115,28 +137,37 @@ div, button, ul, li, h1, h2 {
   background-background-repeat: repeat;
   background-color: #fffcec;
 }
-/* line 130, ../scss/sass/screen.scss */
-.page.welcome p:first-of-type {
+/* line 150, ../scss/sass/screen.scss */
+.page.welcome .super, .page.contact .super {
   margin-top: 40px;
 }
-/* line 134, ../scss/sass/screen.scss */
-.page.welcome h1 {
+/* line 154, ../scss/sass/screen.scss */
+.page.welcome h1, .page.contact h1 {
   color: #552500;
 }
-/* line 136, ../scss/sass/screen.scss */
-.page.welcome h1:after {
+/* line 156, ../scss/sass/screen.scss */
+.page.welcome h1:after, .page.contact h1:after {
   background-color: #552500;
 }
-/* line 140, ../scss/sass/screen.scss */
-.page.welcome h2 {
+/* line 160, ../scss/sass/screen.scss */
+.page.welcome h2, .page.contact h2 {
   color: #552500;
+  position: relative;
 }
-/* line 142, ../scss/sass/screen.scss */
-.page.welcome h2:after {
+/* line 163, ../scss/sass/screen.scss */
+.page.welcome h2:after, .page.contact h2:after {
   background-color: #552500;
 }
-/* line 146, ../scss/sass/screen.scss */
-.page.welcome p {
+/* line 166, ../scss/sass/screen.scss */
+.page.welcome h2.left, .page.contact h2.left {
+  text-align: left;
+}
+/* line 168, ../scss/sass/screen.scss */
+.page.welcome h2.left:after, .page.contact h2.left:after {
+  left: 0;
+}
+/* line 173, ../scss/sass/screen.scss */
+.page.welcome p, .page.contact p {
   color: #67462c;
   line-height: 1.5;
   font-weight: normal;
@@ -144,106 +175,75 @@ div, button, ul, li, h1, h2 {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 156, ../scss/sass/screen.scss */
+/* line 183, ../scss/sass/screen.scss */
 .logo {
   position: absolute;
   text-indent: -999999px;
   left: 50%;
-  margin-left: -112px;
-  width: 224px;
-  height: 150px;
-  top: 50%;
+  margin-left: -135px;
+  width: 270px;
+  height: 200px;
+  top: 30%;
   margin-top: -112px;
   background-image: url(../images/logo.svg);
-  background-size: 224px 150px;
+  background-size: 270px;
   background-repeat: no-repeat;
 }
 
-/* line 173, ../scss/sass/screen.scss */
+/* line 200, ../scss/sass/screen.scss */
 .menu {
   position: fixed;
-  right: 100px;
+  top: 0;
   display: inline-block;
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
+  text-align: center;
   z-index: 100;
-  top: 50%;
-  margin-top: -80px;
 }
-/* line 184, ../scss/sass/screen.scss */
+/* line 211, ../scss/sass/screen.scss */
 .menu li {
-  display: block;
+  display: inline-block;
+  padding: 10px 30px 10px 10px;
   color: white;
   text-align: left;
   font-family: "Raleway";
-  font-size: 16px;
+  font-size: 18px;
   text-transform: uppercase;
-  color: #d1b271;
+  color: #a68236;
   letter-spacing: 1px;
-  margin-bottom: 30px;
   position: relative;
   cursor: pointer;
+  text-align: center;
   -webkit-transition: color 500ms linear;
   -moz-transition: color 500ms linear;
   -o-transition: color 500ms linear;
   transition: color 500ms linear;
 }
-/* line 198, ../scss/sass/screen.scss */
-.menu li:before {
-  content: "";
-  position: absolute;
-  border: 2px solid #d1b271;
-  width: 10px;
-  height: 10px;
-  right: -30px;
-  top: 50%;
-  margin-top: -5px;
-  border-radius: 50%;
-  z-index: 10;
-  -webkit-transition: background-color 500ms ease;
-  -moz-transition: background-color 500ms ease;
-  -o-transition: background-color 500ms ease;
-  transition: background-color 500ms ease;
-}
-/* line 211, ../scss/sass/screen.scss */
-.menu li:after {
-  content: "";
-  position: absolute;
-  right: -24px;
-  top: 17px;
-  height: 40px;
-  width: 2px;
-  background-color: #d1b271;
-}
-/* line 220, ../scss/sass/screen.scss */
+/* line 226, ../scss/sass/screen.scss */
 .menu li:hover {
   color: #ed8d6c;
-  -webkit-transition: color 500ms linear;
-  -moz-transition: color 500ms linear;
-  -o-transition: color 500ms linear;
-  transition: color 500ms linear;
 }
-/* line 222, ../scss/sass/screen.scss */
-.menu li:hover:before {
-  background-color: #ed8d6c;
-  -webkit-transition: background-color 500ms ease;
-  -moz-transition: background-color 500ms ease;
-  -o-transition: background-color 500ms ease;
-  transition: background-color 500ms ease;
-}
-/* line 231, ../scss/sass/screen.scss */
-.menu li:last-child:after {
-  display: none;
+/* line 230, ../scss/sass/screen.scss */
+.menu:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background-color: rgba(209, 178, 113, 0.5);
 }
 
-/* line 242, ../scss/sass/screen.scss */
+/* line 245, ../scss/sass/screen.scss */
 .half {
   width: 49.5%;
   display: inline-block;
   position: relative;
+  vertical-align: top;
 }
-/* line 246, ../scss/sass/screen.scss */
+/* line 251, ../scss/sass/screen.scss */
 .half .portrait {
   content: "";
   width: 160px;
@@ -256,11 +256,48 @@ div, button, ul, li, h1, h2 {
   background-size: 160px;
   background-repeat: no-repeat;
 }
-/* line 259, ../scss/sass/screen.scss */
+/* line 264, ../scss/sass/screen.scss */
 .half .portrait.ildiko {
   background-image: url(../images/ildiko.jpg);
 }
-/* line 262, ../scss/sass/screen.scss */
+/* line 267, ../scss/sass/screen.scss */
 .half .portrait.lise {
   background-image: url(../images/lise.jpg);
+}
+
+/* line 275, ../scss/sass/screen.scss */
+form .name,
+form .email {
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+  font-family: "Raleway";
+  font-size: 18px;
+  margin-bottom: 20px;
+  border: 0;
+  border-radius: 10px;
+  border: 8px solid rgba(217, 129, 52, 0.5);
+}
+/* line 287, ../scss/sass/screen.scss */
+form .message {
+  padding: 10px;
+  margin: 0;
+  font-family: "Raleway";
+  font-size: 18px;
+  height: 160px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 100%;
+  border: 8px solid rgba(217, 129, 52, 0.6);
+}
+/* line 298, ../scss/sass/screen.scss */
+form .submit {
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-family: "Raleway";
+  border-radius: 5px;
+  border: 0;
+  background-color: #d98134;
+  border: 8px solid rgba(217, 129, 52, 0.6);
 }

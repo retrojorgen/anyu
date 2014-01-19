@@ -5,3 +5,11 @@ var scrollController = function(event) {
 }
 
 $(document).on('scroll', scrollController);
+
+$('#contact-form').on('submit', function(event) {
+	event.preventDefault();
+	console.log($(this).serialize());
+	$.post( 'mailto.php', $(this).serialize(), function(data) {
+		console.log(data);
+	});
+});

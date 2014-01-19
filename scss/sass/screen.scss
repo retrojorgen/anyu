@@ -28,9 +28,13 @@ body {
   width: 100%;
   font-family: $thinFont;
   background-color: rgba(235,235,235,1);
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
 }
 
-div, button, ul, li,h1,h2 {
+div, button, ul, li,h1,h2, input, textarea {
   @include box-sizing(border-box);
 }
 
@@ -47,9 +51,9 @@ div, button, ul, li,h1,h2 {
     overflow: hidden;
     .address {
       font-family: $regularFont;
-      font-size: 16px;
+      font-size: 20px;
       position: absolute;
-      top: 50%;
+      top: 34%;
       margin-top: 60px;
       display: block;
       width: 100%;
@@ -97,7 +101,7 @@ div, button, ul, li,h1,h2 {
         position: absolute;
         width: 30%;
         height: 2px;
-        top: 60px;
+        top: 40px;
         left: 34%;
         background: {
           color: rgba(255,255,255,0.6);
@@ -112,11 +116,27 @@ div, button, ul, li,h1,h2 {
   &.intro {
     background: {
       image: url(../images/intro-2.jpg);
-      size: 100%;
+      size: 180%;
       repeat: no-repeat;
     }
+    @media #{$otherThanPhoneAndIpad} {
+      background-size: 100%;
+    }
   }
-  &.welcome {
+
+  &.offer {
+    background: {
+      image: url(../images/behandling-2.jpg);
+      size: 180%;
+      repeat: no-repeat;
+    }
+    @media #{$otherThanPhoneAndIpad} {
+      background-size: 100%;
+    }
+  }
+
+  &.welcome,
+  &.contact {
     color: rgba(255,255,255,0.8);
     @include box-shadow(0 0 40px 1px rgba(0,0,0,0.4));
     background: {
@@ -127,7 +147,7 @@ div, button, ul, li,h1,h2 {
       color: #fffcec;
     }
 
-    p:first-of-type {
+    .super {
       margin-top: 40px;
     }
 
@@ -139,8 +159,15 @@ div, button, ul, li,h1,h2 {
     }
     h2 {
       color: #552500;
+      position: relative;
       &:after {
         background-color: #552500;
+      }
+      &.left {
+        text-align: left;
+        &:after {
+          left: 0;
+        }
       }
     }
     p {
@@ -157,81 +184,57 @@ div, button, ul, li,h1,h2 {
   position: absolute;
   text-indent: -999999px;
   left: 50%;
-  margin-left: -112px;
-  width: 224px;
-  height: 150px;
-  top: 50%;
+  margin-left: -135px;
+  width: 270px;
+  height: 200px;
+  top: 30%;
   margin-top: -112px;
   
   background: {
     image: url(../images/logo.svg);
-    size: 224px 150px;
+    size: 270px;
     repeat: no-repeat;
   }
 }
 
 .menu {
   position: fixed;
-  right: 100px;
+  top: 0;
   display: inline-block;
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
+  text-align: center;
   z-index: 100;
-  top: 50%;
-  margin-top: -80px;
 
   li {
-    display: block;
+    display: inline-block;
+    padding: 10px 30px 10px 10px;
     color: white;
     text-align: left;
     font-family: $thinFont;
-    font-size: 16px;
+    font-size: 18px;
     text-transform: uppercase;
-    color: #d1b271;
+    color: darken(#d1b271, 20%);
     letter-spacing: 1px;
-    margin-bottom: 30px;
     position: relative;
     cursor:pointer;
+    text-align: center;
     @include transition(color 500ms linear);
 
-    &:before {
-      content: "";
-      position: absolute;
-      border: 2px solid #d1b271;
-      width: 10px;
-      height: 10px;
-      right: -30px;
-      top: 50%;
-      margin-top: -5px;
-      border-radius: 50%;
-      z-index: 10;
-      @include transition(background-color 500ms ease);
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      right: -24px;
-      top: 17px;
-      height: 40px;
-      width: 2px;
-      background-color: #d1b271;
-    }
     &:hover {
       color: #ed8d6c;
-      &:before {
-        background: {
-          color: #ed8d6c;
-        }
-        @include transition(background-color 500ms ease);
-      }
-      @include transition(color 500ms linear);
     }
-    &:last-child {
-      &:after {
-        display: none;
-      }
-    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color: fade-out(#d1b271, 0.5);
   }
 }
 
@@ -243,6 +246,8 @@ div, button, ul, li,h1,h2 {
   width: 49.5%;
   display: inline-block;
   position: relative;
+  vertical-align: top;
+
   .portrait {
     content: "";
     width: 160px;
@@ -262,5 +267,44 @@ div, button, ul, li,h1,h2 {
     &.lise {
       background-image: url(../images/lise.jpg);  
     }
+  }
+}
+
+form {
+  .name,
+  .email {
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    font-family: $thinFont;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: 0;
+    border-radius: 10px;
+    border: 8px solid fade-out(#d98134, 0.5);
+
+  }
+  .message {
+    padding: 10px;
+    margin: 0;
+    font-family: $thinFont;
+    font-size: 18px;
+    height: 160px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 100%;
+    border: 8px solid fade-out(#d98134, 0.4);
+  }
+  .submit {
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-family: $thinFont;
+    border-radius: 5px;
+    border: 0;
+    background: {
+      color: #d98134;
+    }
+    border: 8px solid fade-out(#d98134, 0.4);
   }
 }
