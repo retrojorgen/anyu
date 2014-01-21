@@ -3,7 +3,12 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 24, ../scss/sass/screen.scss */
+/* line 23, ../scss/sass/screen.scss */
+a:hover {
+  color: #ed8d6c;
+}
+
+/* line 28, ../scss/sass/screen.scss */
 html,
 body {
   margin: 0;
@@ -18,20 +23,20 @@ body {
   line-height: 1;
 }
 
-/* line 37, ../scss/sass/screen.scss */
+/* line 41, ../scss/sass/screen.scss */
 div, button, ul, li, h1, h2, input, textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 41, ../scss/sass/screen.scss */
+/* line 45, ../scss/sass/screen.scss */
 .page {
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 45, ../scss/sass/screen.scss */
+/* line 49, ../scss/sass/screen.scss */
 .page .page-body {
   position: relative;
   width: 100%;
@@ -39,9 +44,10 @@ div, button, ul, li, h1, h2, input, textarea {
   max-width: 700px;
   height: 100%;
   overflow: hidden;
+  vertical-align: middle;
   color: #6a4e4e;
 }
-/* line 52, ../scss/sass/screen.scss */
+/* line 57, ../scss/sass/screen.scss */
 .page .page-body .address {
   font-family: "Sanchez";
   font-size: 20px;
@@ -54,7 +60,7 @@ div, button, ul, li, h1, h2, input, textarea {
   color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
 }
-/* line 66, ../scss/sass/screen.scss */
+/* line 71, ../scss/sass/screen.scss */
 .page .page-body h1 {
   position: relative;
   display: block;
@@ -72,7 +78,7 @@ div, button, ul, li, h1, h2, input, textarea {
   line-height: 1;
   color: rgba(255, 255, 255, 0.6);
 }
-/* line 84, ../scss/sass/screen.scss */
+/* line 89, ../scss/sass/screen.scss */
 .page .page-body h1:after {
   content: "";
   position: absolute;
@@ -82,11 +88,11 @@ div, button, ul, li, h1, h2, input, textarea {
   left: 34%;
   background-color: rgba(255, 255, 255, 0.6);
 }
-/* line 96, ../scss/sass/screen.scss */
+/* line 101, ../scss/sass/screen.scss */
 .page .page-body h2 {
   text-align: center;
 }
-/* line 99, ../scss/sass/screen.scss */
+/* line 104, ../scss/sass/screen.scss */
 .page .page-body h2:after {
   content: "";
   position: absolute;
@@ -96,36 +102,36 @@ div, button, ul, li, h1, h2, input, textarea {
   left: 34%;
   background-color: rgba(255, 255, 255, 0.6);
 }
-/* line 111, ../scss/sass/screen.scss */
+/* line 116, ../scss/sass/screen.scss */
 .page .page-body p {
   line-height: 1.6;
   font-size: 18px;
 }
-/* line 116, ../scss/sass/screen.scss */
+/* line 121, ../scss/sass/screen.scss */
 .page.intro {
   background-image: url(../images/intro-2.jpg);
   background-size: 180%;
   background-repeat: no-repeat;
 }
 @media only screen and (min-width: 1025px) {
-  /* line 116, ../scss/sass/screen.scss */
+  /* line 121, ../scss/sass/screen.scss */
   .page.intro {
     background-size: 100%;
   }
 }
-/* line 127, ../scss/sass/screen.scss */
+/* line 132, ../scss/sass/screen.scss */
 .page.offer {
   background-image: url(../images/behandling-2.jpg);
   background-size: 180%;
   background-repeat: no-repeat;
 }
 @media only screen and (min-width: 1025px) {
-  /* line 127, ../scss/sass/screen.scss */
+  /* line 132, ../scss/sass/screen.scss */
   .page.offer {
     background-size: 100%;
   }
 }
-/* line 139, ../scss/sass/screen.scss */
+/* line 144, ../scss/sass/screen.scss */
 .page.welcome, .page.contact {
   color: rgba(255, 255, 255, 0.8);
   -webkit-box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.4);
@@ -137,36 +143,36 @@ div, button, ul, li, h1, h2, input, textarea {
   background-background-repeat: repeat;
   background-color: #fffcec;
 }
-/* line 150, ../scss/sass/screen.scss */
+/* line 155, ../scss/sass/screen.scss */
 .page.welcome .super, .page.contact .super {
   margin-top: 40px;
 }
-/* line 154, ../scss/sass/screen.scss */
+/* line 159, ../scss/sass/screen.scss */
 .page.welcome h1, .page.contact h1 {
   color: #552500;
 }
-/* line 156, ../scss/sass/screen.scss */
+/* line 161, ../scss/sass/screen.scss */
 .page.welcome h1:after, .page.contact h1:after {
   background-color: #552500;
 }
-/* line 160, ../scss/sass/screen.scss */
+/* line 165, ../scss/sass/screen.scss */
 .page.welcome h2, .page.contact h2 {
   color: #552500;
   position: relative;
 }
-/* line 163, ../scss/sass/screen.scss */
+/* line 168, ../scss/sass/screen.scss */
 .page.welcome h2:after, .page.contact h2:after {
   background-color: #552500;
 }
-/* line 166, ../scss/sass/screen.scss */
+/* line 171, ../scss/sass/screen.scss */
 .page.welcome h2.left, .page.contact h2.left {
   text-align: left;
 }
-/* line 168, ../scss/sass/screen.scss */
+/* line 173, ../scss/sass/screen.scss */
 .page.welcome h2.left:after, .page.contact h2.left:after {
   left: 0;
 }
-/* line 173, ../scss/sass/screen.scss */
+/* line 178, ../scss/sass/screen.scss */
 .page.welcome p, .page.contact p {
   color: #67462c;
   line-height: 1.5;
@@ -175,22 +181,22 @@ div, button, ul, li, h1, h2, input, textarea {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 183, ../scss/sass/screen.scss */
+/* line 188, ../scss/sass/screen.scss */
 .logo {
   position: absolute;
   text-indent: -999999px;
   left: 50%;
   margin-left: -135px;
-  width: 270px;
+  width: 340px;
   height: 200px;
-  top: 30%;
-  margin-top: -112px;
+  top: 50%;
+  margin-top: -200px;
   background-image: url(../images/logo.svg);
-  background-size: 270px;
+  background-size: 340px;
   background-repeat: no-repeat;
 }
 
-/* line 200, ../scss/sass/screen.scss */
+/* line 205, ../scss/sass/screen.scss */
 .menu {
   position: fixed;
   top: 0;
@@ -202,7 +208,7 @@ div, button, ul, li, h1, h2, input, textarea {
   text-align: center;
   z-index: 100;
 }
-/* line 211, ../scss/sass/screen.scss */
+/* line 216, ../scss/sass/screen.scss */
 .menu li {
   display: inline-block;
   padding: 10px 30px 10px 10px;
@@ -221,29 +227,29 @@ div, button, ul, li, h1, h2, input, textarea {
   -o-transition: color 500ms linear;
   transition: color 500ms linear;
 }
-/* line 226, ../scss/sass/screen.scss */
+/* line 231, ../scss/sass/screen.scss */
 .menu li:hover {
   color: #ed8d6c;
 }
-/* line 230, ../scss/sass/screen.scss */
+/* line 235, ../scss/sass/screen.scss */
 .menu:after {
   content: "";
   position: absolute;
   bottom: 0;
   height: 2px;
-  width: 100%;
-  left: 0;
+  width: 80%;
+  left: 10%;
   background-color: rgba(209, 178, 113, 0.5);
 }
 
-/* line 245, ../scss/sass/screen.scss */
+/* line 250, ../scss/sass/screen.scss */
 .half {
   width: 49.5%;
   display: inline-block;
   position: relative;
   vertical-align: top;
 }
-/* line 251, ../scss/sass/screen.scss */
+/* line 256, ../scss/sass/screen.scss */
 .half .portrait {
   content: "";
   width: 160px;
@@ -256,16 +262,16 @@ div, button, ul, li, h1, h2, input, textarea {
   background-size: 160px;
   background-repeat: no-repeat;
 }
-/* line 264, ../scss/sass/screen.scss */
+/* line 269, ../scss/sass/screen.scss */
 .half .portrait.ildiko {
   background-image: url(../images/ildiko.jpg);
 }
-/* line 267, ../scss/sass/screen.scss */
+/* line 272, ../scss/sass/screen.scss */
 .half .portrait.lise {
   background-image: url(../images/lise.jpg);
 }
 
-/* line 275, ../scss/sass/screen.scss */
+/* line 280, ../scss/sass/screen.scss */
 form .name,
 form .email {
   padding: 10px;
@@ -278,7 +284,7 @@ form .email {
   border-radius: 10px;
   border: 8px solid rgba(217, 129, 52, 0.5);
 }
-/* line 287, ../scss/sass/screen.scss */
+/* line 292, ../scss/sass/screen.scss */
 form .message {
   padding: 10px;
   margin: 0;
@@ -290,7 +296,7 @@ form .message {
   width: 100%;
   border: 8px solid rgba(217, 129, 52, 0.6);
 }
-/* line 298, ../scss/sass/screen.scss */
+/* line 303, ../scss/sass/screen.scss */
 form .submit {
   color: white;
   padding: 10px;
@@ -300,4 +306,1013 @@ form .submit {
   border: 0;
   background-color: #d98134;
   border: 8px solid rgba(217, 129, 52, 0.6);
+}
+
+/* line 317, ../scss/sass/screen.scss */
+.inner-menu {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+  z-index: 500;
+}
+/* line 326, ../scss/sass/screen.scss */
+.inner-menu li {
+  padding: 10px;
+  display: inline-block;
+  font-family: "Raleway";
+  text-transform: uppercase;
+  font-size: 18px;
+}
+/* line 332, ../scss/sass/screen.scss */
+.inner-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 340, ../scss/sass/screen.scss */
+.inner-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* line 344, ../scss/sass/screen.scss */
+.inner-content .content-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 349, ../scss/sass/screen.scss */
+.inner-content .content-container .page-body {
+  padding-top: 130px;
+}
+
+/* line 360, ../scss/sass/screen.scss */
+.dandelion-1,
+.dandelion-2,
+.dandelion-3,
+.dandelion-4,
+.dandelion-5 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin-top: -180px;
+  left: 50%;
+  margin-left: 130px;
+  background-image: url("../images/dandelion.svg");
+  background-size: 40px;
+}
+
+/* line 374, ../scss/sass/screen.scss */
+.dandelion-1 {
+  -webkit-animation: dandelion-1 10s infinite linear;
+  -moz-animation: dandelion-1 10s infinite linear;
+  -ms-animation: dandelion-1 10s infinite linear;
+  -o-animation: dandelion-1 10s infinite linear;
+  animation: dandelion-1 10s infinite linear;
+}
+
+/* line 377, ../scss/sass/screen.scss */
+.dandelion-2 {
+  -webkit-animation: dandelion-2 15s infinite linear;
+  -moz-animation: dandelion-2 15s infinite linear;
+  -ms-animation: dandelion-2 15s infinite linear;
+  -o-animation: dandelion-2 15s infinite linear;
+  animation: dandelion-2 15s infinite linear;
+}
+
+/* line 380, ../scss/sass/screen.scss */
+.dandelion-3 {
+  -webkit-animation: dandelion-3 20s infinite linear;
+  -moz-animation: dandelion-3 20s infinite linear;
+  -ms-animation: dandelion-3 20s infinite linear;
+  -o-animation: dandelion-3 20s infinite linear;
+  animation: dandelion-3 20s infinite linear;
+}
+
+/* line 383, ../scss/sass/screen.scss */
+.dandelion-4 {
+  -webkit-animation: dandelion-4 10s infinite linear;
+  -moz-animation: dandelion-4 10s infinite linear;
+  -ms-animation: dandelion-4 10s infinite linear;
+  -o-animation: dandelion-4 10s infinite linear;
+  animation: dandelion-4 10s infinite linear;
+}
+
+@-webkit-keyframes dandelion-1 {
+  /* line 404, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 407, ../scss/sass/screen.scss */
+  15% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 411, ../scss/sass/screen.scss */
+  20% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 414, ../scss/sass/screen.scss */
+  25% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 418, ../scss/sass/screen.scss */
+  60% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /* line 421, ../scss/sass/screen.scss */
+  75% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    opacity: 0;
+    left: 10%;
+    top: 20%;
+  }
+
+  /* line 427, ../scss/sass/screen.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes dandelion-1 {
+  /* line 404, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 407, ../scss/sass/screen.scss */
+  15% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 411, ../scss/sass/screen.scss */
+  20% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 414, ../scss/sass/screen.scss */
+  25% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 418, ../scss/sass/screen.scss */
+  60% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /* line 421, ../scss/sass/screen.scss */
+  75% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    opacity: 0;
+    left: 10%;
+    top: 20%;
+  }
+
+  /* line 427, ../scss/sass/screen.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes dandelion-1 {
+  /* line 404, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 407, ../scss/sass/screen.scss */
+  15% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 411, ../scss/sass/screen.scss */
+  20% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 414, ../scss/sass/screen.scss */
+  25% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 418, ../scss/sass/screen.scss */
+  60% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /* line 421, ../scss/sass/screen.scss */
+  75% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    opacity: 0;
+    left: 10%;
+    top: 20%;
+  }
+
+  /* line 427, ../scss/sass/screen.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dandelion-1 {
+  /* line 404, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 407, ../scss/sass/screen.scss */
+  15% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 411, ../scss/sass/screen.scss */
+  20% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 414, ../scss/sass/screen.scss */
+  25% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 418, ../scss/sass/screen.scss */
+  60% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /* line 421, ../scss/sass/screen.scss */
+  75% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    opacity: 0;
+    left: 10%;
+    top: 20%;
+  }
+
+  /* line 427, ../scss/sass/screen.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes dandelion-2 {
+  /* line 433, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 436, ../scss/sass/screen.scss */
+  50% {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  /* line 442, ../scss/sass/screen.scss */
+  75% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 446, ../scss/sass/screen.scss */
+  80% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 449, ../scss/sass/screen.scss */
+  85% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 452, ../scss/sass/screen.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    left: 60%;
+    top: 10%;
+  }
+}
+
+@-moz-keyframes dandelion-2 {
+  /* line 433, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 436, ../scss/sass/screen.scss */
+  50% {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  /* line 442, ../scss/sass/screen.scss */
+  75% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 446, ../scss/sass/screen.scss */
+  80% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 449, ../scss/sass/screen.scss */
+  85% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 452, ../scss/sass/screen.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    left: 60%;
+    top: 10%;
+  }
+}
+
+@-ms-keyframes dandelion-2 {
+  /* line 433, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 436, ../scss/sass/screen.scss */
+  50% {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  /* line 442, ../scss/sass/screen.scss */
+  75% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 446, ../scss/sass/screen.scss */
+  80% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 449, ../scss/sass/screen.scss */
+  85% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 452, ../scss/sass/screen.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    left: 60%;
+    top: 10%;
+  }
+}
+
+@keyframes dandelion-2 {
+  /* line 433, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 436, ../scss/sass/screen.scss */
+  50% {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  /* line 442, ../scss/sass/screen.scss */
+  75% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 446, ../scss/sass/screen.scss */
+  80% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 449, ../scss/sass/screen.scss */
+  85% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 452, ../scss/sass/screen.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    left: 60%;
+    top: 10%;
+  }
+}
+
+@-webkit-keyframes dandelion-3 {
+  /* line 461, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 464, ../scss/sass/screen.scss */
+  25% {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+  }
+
+  /* line 469, ../scss/sass/screen.scss */
+  45% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 473, ../scss/sass/screen.scss */
+  50% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 476, ../scss/sass/screen.scss */
+  55% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 479, ../scss/sass/screen.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    left: 80%;
+    top: 60%;
+  }
+}
+
+@-moz-keyframes dandelion-3 {
+  /* line 461, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 464, ../scss/sass/screen.scss */
+  25% {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+  }
+
+  /* line 469, ../scss/sass/screen.scss */
+  45% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 473, ../scss/sass/screen.scss */
+  50% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 476, ../scss/sass/screen.scss */
+  55% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 479, ../scss/sass/screen.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    left: 80%;
+    top: 60%;
+  }
+}
+
+@-ms-keyframes dandelion-3 {
+  /* line 461, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 464, ../scss/sass/screen.scss */
+  25% {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+  }
+
+  /* line 469, ../scss/sass/screen.scss */
+  45% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 473, ../scss/sass/screen.scss */
+  50% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 476, ../scss/sass/screen.scss */
+  55% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 479, ../scss/sass/screen.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    left: 80%;
+    top: 60%;
+  }
+}
+
+@keyframes dandelion-3 {
+  /* line 461, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 464, ../scss/sass/screen.scss */
+  25% {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+  }
+
+  /* line 469, ../scss/sass/screen.scss */
+  45% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 473, ../scss/sass/screen.scss */
+  50% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 476, ../scss/sass/screen.scss */
+  55% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 479, ../scss/sass/screen.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    left: 80%;
+    top: 60%;
+  }
+}
+
+@-webkit-keyframes dandelion-4 {
+  /* line 488, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 491, ../scss/sass/screen.scss */
+  25% {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+  }
+
+  /* line 496, ../scss/sass/screen.scss */
+  45% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 500, ../scss/sass/screen.scss */
+  50% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 503, ../scss/sass/screen.scss */
+  55% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 506, ../scss/sass/screen.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    left: 60%;
+    top: 90%;
+  }
+}
+
+@-moz-keyframes dandelion-4 {
+  /* line 488, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 491, ../scss/sass/screen.scss */
+  25% {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+  }
+
+  /* line 496, ../scss/sass/screen.scss */
+  45% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 500, ../scss/sass/screen.scss */
+  50% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 503, ../scss/sass/screen.scss */
+  55% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 506, ../scss/sass/screen.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    left: 60%;
+    top: 90%;
+  }
+}
+
+@-ms-keyframes dandelion-4 {
+  /* line 488, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 491, ../scss/sass/screen.scss */
+  25% {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+  }
+
+  /* line 496, ../scss/sass/screen.scss */
+  45% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 500, ../scss/sass/screen.scss */
+  50% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 503, ../scss/sass/screen.scss */
+  55% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 506, ../scss/sass/screen.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    left: 60%;
+    top: 90%;
+  }
+}
+
+@keyframes dandelion-4 {
+  /* line 488, ../scss/sass/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 491, ../scss/sass/screen.scss */
+  25% {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+  }
+
+  /* line 496, ../scss/sass/screen.scss */
+  45% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 500, ../scss/sass/screen.scss */
+  50% {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+
+  /* line 503, ../scss/sass/screen.scss */
+  55% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 506, ../scss/sass/screen.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    left: 60%;
+    top: 90%;
+  }
 }
