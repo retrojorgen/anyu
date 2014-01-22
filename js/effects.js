@@ -1,7 +1,8 @@
 var scrollController = function(event) {
-		$('.intro').css({
+/**		$('.intro').css({
 		'background-position': '0 ' + (window.scrollY*-1)/3 + 'px'
 		});
+**/
 	},
 	innerScrollController = function(id) {
 		console.log(document.getElementById(id), id.substring(1,id.length));
@@ -16,9 +17,14 @@ $(document).on('scroll', scrollController);
 
 $('#contact-form').on('submit', function(event) {
 	event.preventDefault();
-	$.post( 'mailto.php', $(this).serialize(), function(data) {
-		console.log(data);
-	});
+	$.post( 'mailto.php', $(this).serialize())
+		.done(function(data) {
+			console.log(data);
+			$('.submit').text(data);
+		})
+		.fail(function(data) {
+			console.log(data);
+		});
 });
 
 $('.inner-menu a').on('click', function(event) {

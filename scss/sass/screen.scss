@@ -55,18 +55,6 @@ div, button, ul, li,h1,h2, input, textarea {
     height: 100%;
     overflow: hidden;
     vertical-align: middle;
-    .address {
-      font-family: $regularFont;
-      font-size: 20px;
-      position: absolute;
-      top: 34%;
-      margin-top: 60px;
-      display: block;
-      width: 100%;
-      text-align: center;
-      color: rgba(255,255,255,0.6);
-      text-transform: uppercase;
-    }
     color: #6a4e4e;
 
     h1 {
@@ -203,6 +191,32 @@ div, button, ul, li,h1,h2, input, textarea {
   }
 }
 
+.address {
+  font-family: $regularFont;
+  font-size: 20px;
+  position: absolute;
+  padding-top: 10px;
+  top: 50%;
+  margin-top: -30px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 30%;
+    left: 50%;
+    margin-left: -15%;
+    height: 1px;
+    background: {
+      color: rgba(255,255,255,0.4);
+    }
+  }
+}
+
 .menu {
   position: fixed;
   top: 0;
@@ -238,8 +252,8 @@ div, button, ul, li,h1,h2, input, textarea {
     position: absolute;
     bottom: 0;
     height: 2px;
-    width: 80%;
-    left: 10%;
+    width: 50%;
+    left: 25%;
     background-color: fade-out(#d1b271, 0.5);
   }
 }
