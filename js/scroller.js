@@ -3,7 +3,7 @@ var elementsArray = [],
     scrollToArea = function(href) {
         $("html, body").animate({
             scrollTop: $(href).offset().top
-        }, 500);
+        }, 1000);
     },
 
     scrollController = function(event) {
@@ -21,12 +21,13 @@ var elementsArray = [],
     }
 
     menuHighlight = function(target) {
-          $('.navigation-item').removeClass('selected');
+        console.log(target);
+          $('.menu-item').removeClass('selected');
           target.addClass('selected');
     },
 
     registerElements = function() {
-        $('.body-wrapper').children().each(function(index) {
+        $('.sections').children().each(function(index) {
             var fromTop = $(this).offset().top,
                 height = $(this).height(),
                 id = $(this).attr('id');
@@ -43,7 +44,7 @@ var elementsArray = [],
             var pageOffset = window.pageYOffset;
             if(pageOffset >= (element.top-20) && pageOffset <= (element.top+element.height)) {
                 if(element.id != currentSection) {
-                    menuHighlight($('.navigation-item.' + element.id));
+                    menuHighlight($('.menu-item.' + element.id));
                     currentSection = element.id;
                 }
             }
@@ -51,7 +52,6 @@ var elementsArray = [],
     };
 
 window.addEventListener('scroll', scrollEvent);
-$('.menu-link').on('click', scrollController);
-$('.content-box.blue').on('click', linkScrollControll);
-$('.navigation-item.home').addClass('selected');
+$('.menu-item').on('click', scrollController);
+$('.menu-item.intro').addClass('selected');
 registerElements();
